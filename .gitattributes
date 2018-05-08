@@ -1,0 +1,4 @@
+* text=auto
+
+# iCalendar files should always use CRLF sequence to terminate lines
+*.ics text eol=crlf
