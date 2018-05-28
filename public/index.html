@@ -34,110 +34,88 @@
     <link rel="canonical" href="https://www.brew4europe.uk/">
     <link href="styles/normalize.css" rel="stylesheet" type="text/css">
     <link href="styles/system-font.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        body {
-            font-family: "system-ui";
-            text-align: center;
-            color: #333333;
-        }
-
-        h1 {
-            font-size: 3em;
-        }
-
-        h2 {
-            font-size: 2em;
-            font-weight: 300;
-        }
-
-        p {
-            font-size: 1.5em;
-            text-align: left;
-        }
-
-        #countdown {
-            font-size: 4em;
-            font-weight: 300;
-        }
-
-        header {
-            margin: 10% 0 10% 0;
-            padding: 2em 15% 2em 15%;
-            color: #FFCC00;
-            background-color: #003399;
-        }
-
-        section {
-            padding: 1em 15% 1em 15%;
-        }
-    </style>
+    <link href="styles/site.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<header>
-    <h1>Put the kettle on for Europe, 4pm every Sunday</h1>
+<main>
+    <header>
+        <h1>Put the kettle on for Europe, 4pm every Sunday</h1>
+    </header>
 
     <h2 id="countdown"></h2>
+</main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
-    <script src="scripts/countdown.js"></script>
-</header>
+<section class="links">
+    <a href="https://twitter.com/Scotkraut/status/996795487792586752">
+        <!-- octicons comment.svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z" />
+        </svg>
+        <span class="quote">British protest at its best...</span> (Julia)
+    </a>
 
-<section>
-    <h2>Seriously?</h2>
-
-    <p>
-        Absolutely!
-        Putting the kettle on is a stereotypical British reflex in times of crisis.
-        What better way to put the week's Brexit news in to perspective than sitting down with a brew?
-    </p>
+    <a href="brew4europe.ics">
+        <!-- octicons calendar.svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16">
+            <path fill-rule="evenodd" d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z"/>
+        </svg>
+        Add brews to your calendar
+    </a>
 </section>
 
-<section>
-    <h2>What if I don't drink tea?</h2>
+<section id="about">
+    <div>
+        <h2>Seriously?</h2>
 
-    <p>
-        No problem!
-        Coffee is fine too.
-        Or hot chocolate.
-        You could even make toast, or bake a cake!
-    </p>
-</section>
-
-<section>
-    <h2>So is this a protest?</h2>
+        <p>
+            Absolutely!
+            Putting the kettle on is a stereotypical British reflex in times of crisis.
+            What better way to put the week's Brexit news in to perspective than sitting down with a brew?
+        </p>
+    </div>
     
-    <p>
-        Maybe!
-        Not everyone can attend pro-EU events and protests, especially not on a regular basis, but there's usually a kettle somewhere nearby.
-        Hopefully it's also an ideal conversation starter with people who voted to leave the EU but are less sure about how things are turning out.
-    </p>
+    <div>
+        <h2>What if I don't drink tea?</h2>
+
+        <p>
+            No problem!
+            Coffee is fine too.
+            Or hot chocolate.
+            You could even make toast, or bake a cake!
+        </p>
+    </div>
+
+    <div>
+        <h2>So is this a protest?</h2>
+
+        <p>
+            Maybe!
+            Not everyone can attend pro-EU events and protests, especially not on a regular basis, but there's usually a kettle somewhere nearby.
+            Hopefully it's also an ideal conversation starter with people who voted to leave the EU but are less sure about how things are turning out.
+        </p>
+    </div>
+
+    <div>
+        <h2>And then?</h2>
+
+        <p>
+            The more ambitious plan is to create a noticable spike in demand on the national grid, so try and synchronise kettles each week and turn on as close to 4pm as you can!
+            (Hey, it's no more daft than throwing fish in the Thames. And definitely not as daft as Brexit!)
+        </p>
+    </div>
+
+    <div>
+        <h2>And then?</h2>
+
+        <p>
+            If it just ends up being a weekly spot of Brexit therapy for a few enthusiasts, that would be great too.
+        </p>
+    </div>
 </section>
 
-<section>
-    <h2>And then?</h2>
-
-    <p>
-        The more ambitious plan is to create a noticable spike in demand on the national grid, so try and synchronise kettles each week and turn on as close to 4pm as you can!
-        (Hey, it's no more daft than throwing fish in the Thames. And definitely not as daft as Brexit!)
-    </p>
-</section>
-
-<section>
-    <h2>And then?</h2>
-
-    <p>
-        If it just ends up being a weekly spot of Brexit therapy for a few enthusiasts, that would be great too.
-    </p>
-</section>
-
-<section>
-    <h2>Where do I sign up?</h2>
-
-    <p>
-        There's absolutely no red tape. Just join us every Sunday. Have a <a href="brew4europe.ics">free event</a> to add to your calendar if you'd like a reminder!
-    </p>
-</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+<script src="scripts/countdown.js"></script>
 
 </body>
 </html>

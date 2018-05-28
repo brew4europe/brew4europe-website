@@ -1,0 +1,97 @@
+body {
+    font-family: "system-ui";
+    text-align: center;
+    color: #333333;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+#about div {
+    max-width: 54em;
+    margin: 3em auto 0 auto;
+}
+
+#about p {
+    text-align: left;
+}
+
+#countdown {
+    font-size: 4em;
+    font-weight: 300;
+}
+
+main {
+    margin: 10% 0 3em 0;
+    padding: 2em 15% 2em 15%;
+    color: #FFCC00;
+    background-color: #003399;
+}
+
+main header {
+    max-width: 44em;
+    margin: 0 auto;
+}
+
+section {
+    margin: 8% 15% 8% 15%;
+}
+
+.links {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    max-width: 44em;
+    border-top: 1px solid #dcdcdc;
+}
+
+.links svg {
+    padding-right: 0.3em;
+    vertical-align: middle;
+    width: 1.5em;
+}
+
+.links a {
+    display: block;
+    position: relative;
+    outline: none;
+    color: #333333;
+    text-decoration: none;
+    text-align: left;
+    font-size: 1.5em;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #dcdcdc;
+    border-collapse: collapse;
+    padding: 0.5em 3em;
+}
+
+.links a:focus, .links a:hover {
+    color: #003399;
+    border: 1px solid #003399;
+}
+
+.links a:focus img, .links a:hover svg {
+    fill: #003399;
+}
+
+.quote {
+    font-family: Georgia, Times, Times New Roman, serif;
+}
+
+.quote::before { 
+    content: '"';
+}
+  
+.quote::after { 
+    content: '"';
+}
