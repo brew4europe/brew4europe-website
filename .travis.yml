@@ -1,5 +1,5 @@
 install:
-  - wget --header='Accept:application/octet-stream' --user=$GITHUB_USER --password=$GITHUB_TOKEN https://api.github.com/repos/netlify/netlifyctl/releases/assets/6273453 -O netlifyctl-linux-amd64-0.3.2.tar.gz
-  - tar -xzvf netlifyctl-linux-amd64-0.3.2.tar.gz
+  - wget https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz -O /tmp/netlifyctl-linux-amd64-0.4.0.tar.gz
+  - tar -xzvf /tmp/netlifyctl-linux-amd64-0.4.0.tar.gz
 script:
   - ./netlifyctl deploy -A $NETLIFY_TOKEN -y -b public
