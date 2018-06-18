@@ -22,8 +22,13 @@
                 nextBrew.weekday(7);
             }
             nextBrew.hour(16).minute(0).second(0);
-        
-            countdownText = 'Next brew ' + now.to(nextBrew);
+
+            var countdownSeconds = nextBrew.diff(now, 'seconds');
+            if (countdownSeconds > 12) {
+                countdownText = 'Next brew ' + now.to(nextBrew);
+            } else {
+                countdownText = 'Next brew in ' + countdownSeconds;
+            }
         }
         
         var countdown = document.getElementById('countdown');
