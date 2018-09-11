@@ -18,8 +18,12 @@ a {
     text-decoration: none;
 }
 
-p {
+p, ul {
     font-size: 1.5em;
+}
+
+#404-suggestions {
+    text-align: left;
 }
 
 #about div {
