@@ -39,7 +39,7 @@ function getBrewsRemaining(startTime, endTime) {
 }
 
 function initializeCountdown() {
-    var endtime = new Date('March 29, 2019 23:00:00 GMT');
+    var endtime = new Date('April 12, 2019 23:00:00 GMT+0100');
 
     var clock = document.getElementById('tmClock');
     var daysSpan = clock.querySelector('.days');
