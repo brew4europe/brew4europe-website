@@ -39,7 +39,7 @@ function getBrewsRemaining(startTime, endTime) {
 }
 
 function initializeCountdown() {
-    var endtime = new Date('October 31, 2019 23:00:00 GMT');
+    var endtime = new Date('January 31, 2020 23:00:00 GMT');
 
     var clock = document.getElementById('tmClock');
     var daysSpan = clock.querySelector('.days');
