@@ -31,7 +31,7 @@ p, ul {
     margin: 3em auto 0 auto;
 }
 
-#about p {
+#about p, #about ul {
     text-align: left;
 }
 
