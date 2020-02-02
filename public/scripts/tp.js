@@ -18,30 +18,22 @@ function getBrewsSince(startTime, endTime) {
     var brews = 0;
     var millisecondsInDay = 86400000;
 
-    // If it's Sunday, check we haven't had brew o'clock!
-    if (startTime.getDay() === 0 && startTime.getHours() >= 16) {
+    // If it's Sunday, check whether we've had brew o'clock!
+    if (endTime.getDay() === 0 && endTime.getHours() >= 16) {
         hadBrew = true;
     }
-
-    // Start counting from the first brew day
-    function getFirstBrewDay(date) {
-        var result = new Date(date);
-        result.setDate(date.getDate() + (7 - date.getDay()) % 7);
-        return result;
-    }
-    var firstBrew = getFirstBrewDay(startTime);
     
     // Work out how many brews there have been
-    if (firstBrew.getTime() < endTime.getTime()) {
-        brews = (hadBrew ? 0 : 1) + Math.floor(((endTime.getTime() - firstBrew.getTime()) / millisecondsInDay) / 7);
+    if (startTime.getTime() < endTime.getTime()) {
+        brews = (hadBrew ? 1 : 0) + Math.floor(((endTime.getTime() - startTime.getTime()) / millisecondsInDay) / 7);
     }
 
     return brews;
 }
 
 function initializeCountdown() {
-    // var starttime = new Date('January 31, 2020 23:00:00 GMT');
     var starttime = new Date('January 31, 2020 23:00:00 GMT');
+    var firstbrew = new Date('February 02, 2020 16:00:00 GMT');
 
     var clock = document.getElementById('tmClock');
     var daysSpan = clock.querySelector('.days');
@@ -54,7 +46,7 @@ function initializeCountdown() {
     function updateCountdown() {
         var now = new Date();
         var t = getTimeSince(starttime, now);
-        var b = getBrewsSince(starttime, now);
+        var b = getBrewsSince(firstbrew, now);
 
         daysSpan.innerHTML = t.days;
         hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
