@@ -1,5 +1,5 @@
-function getTimeSince(startTime, endtime) {
-    var t = Date.parse(endtime) - Date.parse(startTime);
+function getTimeSince(startTime, endTime) {
+    var t = Date.parse(endTime) - Date.parse(startTime);
     var seconds = Math.floor((t / 1000) % 60);
     var minutes = Math.floor((t / 1000 / 60) % 60);
     var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -13,27 +13,22 @@ function getTimeSince(startTime, endtime) {
     };
 }
 
-function getBrewsSince(startTime, endTime) {
-    var hadBrew = false;
+function getBrewsSince(firstBrew, endTime) {
+    // firstBrew must be a Sunday at 4pm
     var brews = 0;
     var millisecondsInDay = 86400000;
-
-    // If it's Sunday, check whether we've had brew o'clock!
-    if (endTime.getDay() === 0 && endTime.getHours() >= 16) {
-        hadBrew = true;
-    }
     
     // Work out how many brews there have been
-    if (startTime.getTime() < endTime.getTime()) {
-        brews = (hadBrew ? 1 : 0) + Math.floor(((endTime.getTime() - startTime.getTime()) / millisecondsInDay) / 7);
+    if (firstBrew.getTime() <= endTime.getTime()) {
+        brews = 1 + Math.floor(((endTime.getTime() - firstBrew.getTime()) / millisecondsInDay) / 7);
     }
 
     return brews;
 }
 
-function initializeCountdown() {
-    var starttime = new Date('January 31, 2020 23:00:00 GMT');
-    var firstbrew = new Date('February 02, 2020 16:00:00 GMT');
+function initializeCountup() {
+    var startTime = new Date('January 31, 2020 23:00:00 GMT');
+    var firstBrew = new Date('February 02, 2020 16:00:00 GMT');
 
     var clock = document.getElementById('tmClock');
     var daysSpan = clock.querySelector('.days');
@@ -43,10 +38,10 @@ function initializeCountdown() {
 
     var brewsSpan = document.getElementById('brews');
 
-    function updateCountdown() {
+    function updateCountup() {
         var now = new Date();
-        var t = getTimeSince(starttime, now);
-        var b = getBrewsSince(firstbrew, now);
+        var t = getTimeSince(startTime, now);
+        var b = getBrewsSince(firstBrew, now);
 
         daysSpan.innerHTML = t.days;
         hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -55,8 +50,8 @@ function initializeCountdown() {
         brewsSpan.innerHTML = b;
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    updateCountup();
+    setInterval(updateCountup, 1000);
 }
 
-initializeCountdown();
+initializeCountup();
