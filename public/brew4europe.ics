@@ -27,7 +27,7 @@ DTSTART;TZID=Europe/London:20180401T160000
 DTEND;TZID=Europe/London:20180401T170000
 RRULE:FREQ=WEEKLY;INTERVAL=1;BYDAY=SU;UNTIL=20190329T230000Z
 SUMMARY:Brew for Europe
-DESCRIPTION:Put the kettle on! https://www.brew4europe.uk
-URL:https://www.brew4europe.uk
+DESCRIPTION:Put the kettle on! https://brew4europe.mti.me.uk
+URL:https://brew4europe.mti.me.uk
 END:VEVENT
 END:VCALENDAR
