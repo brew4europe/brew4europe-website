@@ -1,9 +1,9 @@
 function getTimeRemaining(startTime, endtime) {
     var t = Date.parse(endtime) - Date.parse(startTime);
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var seconds = Math.max(0, Math.floor((t / 1000) % 60));
+    var minutes = Math.max(0, Math.floor((t / 1000 / 60) % 60));
+    var hours = Math.max(0, Math.floor((t / (1000 * 60 * 60)) % 24));
+    var days = Math.max(0, Math.floor(t / (1000 * 60 * 60 * 24)));
     return {
         'total': t,
         'days': days,
@@ -39,7 +39,7 @@ function getBrewsRemaining(startTime, endTime) {
 }
 
 function initializeCountdown() {
-    var endtime = new Date('June 30, 2020 23:00:00 GMT');
+    var endtime = new Date('December 31, 2020 23:00:00 GMT');
 
     var clock = document.getElementById('tmClock');
     var daysSpan = clock.querySelector('.days');
