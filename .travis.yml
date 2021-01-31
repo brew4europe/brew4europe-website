@@ -1,8 +1,0 @@
-branches:
-  only:
-  - master
-install:
-  - wget https://github.com/netlify/netlifyctl/releases/download/v0.4.0/netlifyctl-linux-amd64-0.4.0.tar.gz -O /tmp/netlifyctl-linux-amd64-0.4.0.tar.gz
-  - tar -xzvf /tmp/netlifyctl-linux-amd64-0.4.0.tar.gz
-script:
-  - ./netlifyctl deploy -A $NETLIFY_TOKEN -y -b public
