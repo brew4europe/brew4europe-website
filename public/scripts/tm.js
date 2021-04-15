@@ -39,7 +39,7 @@ function getBrewsRemaining(startTime, endTime) {
 }
 
 function initializeCountdown() {
-    var endtime = new Date('April 01, 2021 00:00:00 UTC+0100');
+    var endtime = new Date('April 29, 2021 23:00:00 UTC+0100');
 
     var clock = document.getElementById('tmClock');
     var daysSpan = clock.querySelector('.days');
